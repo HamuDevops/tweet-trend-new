@@ -5,12 +5,15 @@ pipeline {
         }
     }
 
+environment {
+        PATH = '/opt/apache-maven-3.9.11/bin/:$PATH'
+    }
+
     stages {
-        stage('Clone-cpde') {
+        stage("build") {
             steps {
-                git 'https://github.com/HamuDevops/DevopsProject-01.git'
+                sh 'mvn clean deploy'
             }
         }
     }
 }
-
