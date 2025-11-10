@@ -98,7 +98,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${surefire.version}</version>
                 <configuration>
-                    <argLine>-Xmx2048m ${jacoco.agent}</argLine>
+                    <argLine>${jacoco.agent}</argLine>
                 </configuration>
             </plugin>
 
@@ -122,6 +122,9 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <outputDirectory>${project.build.directory}/site/jacoco</outputDirectory>
+                </configuration>
             </plugin>
 
             <!-- SonarCloud -->
