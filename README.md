@@ -1,6 +1,9 @@
-let me explain the full process we follow for updating SSL certificates in OCI for both internal and external load balancers.  
+Today I am showing the process we follow for updating SSL certificates on both internal and external Load Balancers in OCI.
+I’ve prepared an SOP for this, but let’s start with Monitoring.
 
-i start with monitoring. In the Governance dashboard, under *SSL Cert Expiry*, we have two segments: one for external LB certificates expiry and one for internal LB certificates expiry. Any certificate that is due to expire within the next 30 days will show with an amber warning light. Along with that, we also receive email alerts that include the compartment name, the load balancer name, and the exact expiry date of the certificate.  
+
+
+In the OCI dashboard, go to Governance. Under SSL Certificate Expiry, when you expand it, you’ll see two indicators one for external LB certificates expiry and one for internal LB certificates expiry. Any certificate that is due to expire within the next 30 days will show with an amber warning light. Along with that, we also receive email alerts that include the compartment name, the load balancer name, and the exact expiry date of the certificate.  
 
 For example, if the certificate for *LB_ASBAV_PSH_OTM_External* is expiring, the first step is to raise a request with the procurement team for a new SSL certificate. To support this request, we need to attach a CSR file. These are generated using the script available on our jump server, located under `/root/ssl_root/script`.  
 
