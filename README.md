@@ -54,4 +54,11 @@ After that, we move to logging. Logging is important for troubleshooting and aud
 
 Once all of this is done, we press Submit, and the Load Balancer is created successfully.
 
-After the Load Balancer is created, the next step is to configure Backend Sets and Hostnames. Since we already discussed how to create a backend set earlier, we can skip repeating that part here. What we need to focus on now is updating and creating the hostname. Once the hostname is set up, we attach both the backend set and the hostname to the listener that was configured previously. This final step completes the setup, making sure the Load Balancer knows exactly which servers to route traffic to and under which hostname they should be identified.
+After the Load Balancer is created, the next step is to configure Backend Sets and Hostnames. Since we already discussed how to create a backend set earlier, we can skip repeating that part here. What we need to focus on now is updating and creating the hostname. 
+
+Once the hostname is set up, we attach both the backend set and the hostname to the listener that was configured previously. 
+
+Next, we need to add the backend servers to the backend set that we created.
+
+
+This final step completes the setup, making sure the Load Balancer knows exactly which servers to route traffic to and under which hostname they should be identified.
